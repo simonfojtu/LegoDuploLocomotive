@@ -36,7 +36,9 @@ Ordered LEGO bricks from The_Duplo_Store via bricklink.com.
 ## 2016-07-08
 
 Received the LEGO bricks.
+
 ![](img_20160709.jpg)
+
 After _thorough_ cleanup, but hey, batteries included..
 
 
@@ -72,4 +74,4 @@ This is the first time I'm dealing with RF, so some troubles are expected, but I
 
 #### Transmitter schematics
 
-![](transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.svg)
+![](transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.pdf)
