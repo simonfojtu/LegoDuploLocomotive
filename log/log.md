@@ -45,6 +45,7 @@ After _thorough_ cleanup, but hey, batteries included..
 ### Radio control
 I've bought 433Mhz transmitter + receiver modules (http://www.ebay.com/itm/380717845396)
 This is the first time I'm dealing with RF, so some troubles are expected, but I'm not rolling my own transmitter or receiver so they should be small.
+
 [useful documentation](http://forum.hobbycomponents.com/viewtopic.php?f=25&t=1324)
 
 #### Transmitter
