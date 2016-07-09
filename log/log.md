@@ -44,8 +44,10 @@ After _thorough_ cleanup, but hey, batteries included..
 
 ### Radio control
 I've bought 433Mhz transmitter + receiver modules (http://www.ebay.com/itm/380717845396)
+This is the first time I'm dealing with RF, so some troubles are expected, but I'm not rolling my own transmitter or receiver so they should be small.
+[useful documentation](http://forum.hobbycomponents.com/viewtopic.php?f=25&t=1324)
 
-Technical parameters of the transmitter:
+#### Transmitter
 
 * Product Model: MX-FS-03V 
 * Launch distance :20-200 meters (different voltage, different results) 
@@ -55,10 +57,11 @@ Technical parameters of the transmitter:
 * Transfer rate: 4KB/s 
 * Transmitting power: 10mW 
 * Transmitting frequency: 433M
-* Pinout from left to right: (DATA; VCC; GND)
 
 
-Technical parameters of the receiver
+![pdf schematics](transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.pdf)
+
+#### Receiver
 
 * Product Model MX-05V 
 * Operating voltage: DC5V 
@@ -70,8 +73,8 @@ Technical parameters of the receiver
   * http://www.csgnetwork.com/freqwavelengthcalc.html
   * 433MHz 1/4 wavelength antenna: 0.173m long
 
-This is the first time I'm dealing with RF, so some troubles are expected, but I'm not rolling my own transmitter or receiver so they should be small.
+## 2016-07-09
 
-#### Transmitter schematics
+Set up log.
 
-![pdf schematics](transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.pdf)
+
