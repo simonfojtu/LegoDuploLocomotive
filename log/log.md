@@ -74,5 +74,4 @@ This is the first time I'm dealing with RF, so some troubles are expected, but I
 
 #### Transmitter schematics
 
-![](transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.pdf)
-![](https://github.com/simonfojtu/LegoDuploLocomotive/raw/master/log/transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.pdf)
+![pdf schematics](transmitter_1e9f973b79bf1e60976f5d36f49e2bdb1212c23c.pdf)
