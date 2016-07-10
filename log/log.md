@@ -84,6 +84,7 @@ Receiver needs motor driver capable of forward and backward rotation.
 
 Motor driver taken from [design 1][1].
 Changed mosfets in transmitter.
+PCB design of transmitter and receiver.
 
 
 [1]: http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html

@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:receiver-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -218,9 +219,7 @@ F 3 "" H 10000 1400 50  0000 C CNN
 	1    10000 1400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10000 1650 10000 1550
-Text Label 9250 1850 2    60   ~ 0
+Text Label 9600 1850 2    60   ~ 0
 MCU-LED
 Wire Wire Line
 	9600 1850 9700 1850
@@ -460,7 +459,7 @@ U 1 1 5782326A
 P 5150 3550
 F 0 "Q2" H 5450 3600 50  0000 R CNN
 F 1 "S8550" H 5750 3500 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 5350 3650 50  0001 C CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 5350 3650 50  0001 C CNN
 F 3 "" H 5150 3550 50  0000 C CNN
 	1    5150 3550
 	-1   0    0    1   
@@ -471,7 +470,7 @@ U 1 1 5782339D
 P 6400 3550
 F 0 "Q3" H 6700 3600 50  0000 R CNN
 F 1 "S8550" H 7000 3500 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 6600 3650 50  0001 C CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 6600 3650 50  0001 C CNN
 F 3 "" H 6400 3550 50  0000 C CNN
 	1    6400 3550
 	1    0    0    1   
@@ -621,30 +620,6 @@ Wire Wire Line
 Wire Wire Line
 	1650 1450 1350 1450
 Connection ~ 1350 1450
-$Comp
-L R R7
-U 1 1 578254A6
-P 9450 1850
-F 0 "R7" V 9530 1850 50  0000 C CNN
-F 1 "220" V 9450 1850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9380 1850 50  0001 C CNN
-F 3 "" H 9450 1850 50  0000 C CNN
-	1    9450 1850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9250 1850 9300 1850
-$Comp
-L Q_NPN_EBC Q6
-U 1 1 57825665
-P 9900 1850
-F 0 "Q6" H 10200 1900 50  0000 R CNN
-F 1 "S8050" H 10500 1800 50  0000 R CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 10100 1950 50  0001 C CNN
-F 3 "" H 9900 1850 50  0000 C CNN
-	1    9900 1850
-	1    0    0    -1  
-$EndComp
 Text Notes 1100 2400 0    60   ~ 0
 programming header
 Text Notes 1200 3500 0    60   ~ 0
@@ -657,4 +632,17 @@ Text Notes 9600 2900 0    60   ~ 0
 signal LED on RX
 Text Notes 9450 650  0    60   ~ 0
 lights on the locomotive 
+$Comp
+L Q_NMOS_GSD Q6
+U 1 1 578243FE
+P 9900 1850
+F 0 "Q6" H 10200 1900 50  0000 R CNN
+F 1 "2N7002" H 10550 1800 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 10100 1950 50  0001 C CNN
+F 3 "" H 9900 1850 50  0000 C CNN
+	1    9900 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1550 10000 1650
 $EndSCHEMATC
