@@ -78,4 +78,12 @@ This is the first time I'm dealing with RF, so some troubles are expected, but I
 
 Set up log.
 
+Receiver needs motor driver capable of forward and backward rotation.
 
+## 2016-07-10
+
+Motor driver taken from [design 1][1].
+Changed mosfets in transmitter.
+
+
+[1]: http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html
