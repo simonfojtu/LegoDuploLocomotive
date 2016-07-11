@@ -86,5 +86,15 @@ Motor driver taken from [design 1][1].
 Changed mosfets in transmitter.
 PCB design of transmitter and receiver.
 
+### Reverse engineering the original circuitry
+There are two ways to determine the current passing through the motor.
+We can measure it, which requires desoldering the wires to the motor, or we can determine, what components are used in the original circuit and trust the designer that the parts are well sized.
+
+![](20160709205616.jpg)
+
+I've started with the latter and found that the motor is controlled by a single PNP transistor S8550.
+
+![](20160709210904.jpg)
+
 
 [1]: http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html
