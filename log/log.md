@@ -96,5 +96,9 @@ I've started with the latter and found that the motor is controlled by a single 
 
 ![](20160709210904.jpg)
 
+This is the motor driver circuit.
+![](20160712_motor_ctrl.png)
+Since the locomotive goes only in one direction a single transistor is sufficitent. The positive battery terminal is not 100% correct, it is wired through a resistor R1, but I'm not sure about its use or value.
+
 
 [1]: http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html
