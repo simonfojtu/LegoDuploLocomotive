@@ -223,7 +223,7 @@ Text Label 9600 1850 2    60   ~ 0
 MCU-LED
 Wire Wire Line
 	9600 1850 9700 1850
-Text Label 2550 1150 0    60   ~ 0
+Text Label 2550 1250 0    60   ~ 0
 MCU-LED
 Text Label 3550 1250 0    60   ~ 0
 MISO
@@ -265,7 +265,7 @@ U 1 1 57812254
 P 1900 4000
 F 0 "P3" H 1900 4250 50  0000 C CNN
 F 1 "MX-05V" V 2000 4000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 1900 4000 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x04" H 1900 4000 50  0001 C CNN
 F 3 "" H 1900 4000 50  0000 C CNN
 	1    1900 4000
 	1    0    0    1   
@@ -309,7 +309,7 @@ Wire Wire Line
 Text Label 1500 3950 2    60   ~ 0
 RX-DATA
 Connection ~ 1600 3950
-Text Label 2550 1250 0    60   ~ 0
+Text Label 2550 1150 0    60   ~ 0
 RX-DATA
 $Comp
 L Q_NMOS_GSD Q5
@@ -356,7 +356,7 @@ U 1 1 5781266C
 P 10000 3450
 F 0 "D1" H 10000 3550 50  0000 C CNN
 F 1 "red" H 10000 3350 50  0000 C CNN
-F 2 "LEDs:LED-3MM" H 10000 3450 50  0001 C CNN
+F 2 "LEDs:LED_0805" H 10000 3450 50  0001 C CNN
 F 3 "" H 10000 3450 50  0000 C CNN
 	1    10000 3450
 	0    -1   -1   0   
