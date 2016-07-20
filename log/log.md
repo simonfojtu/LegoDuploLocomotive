@@ -102,7 +102,7 @@ This is the motor driver circuit.
 
 Since the locomotive goes only in one direction a single transistor is sufficitent. The positive battery terminal is not 100% correct, it is wired through a resistor R1, but I'm not sure about its use or value.
 
-## 2016-07-20
+## 2016-07-19
 
 The receiver PCB was sent to fab (oshpark.com), expected arrival well before deadline at 28. 8.
 The radio modules arrived.
@@ -110,5 +110,24 @@ While testing the motor driver and radio receiver, it is obvious that the motor 
 I've kind of expected that and thought it could be solved in software by using some encoding, but without an oscilloscope it would be hard to make it robust.
 Thus I've ordered some IR receivers, which should not be bothered by any EM interference.
 The main goal is to make the locomotive go forward and backward, remote control is a bonus to implement if there is time.
+
+## 2016-07-20
+
+I've made plenty of mistakes in the design of the receiver pcb.
+I've forgotten a pull-up resistor on RESET signal, but it seems it is not entirely necessary, since on a breadboard the MCU is running fine.
+I've forgotten the clamping diodes on the H-bridge, but again the breadboarded version without them is running happily (it seems).
+Nevertheless, the diodes can be bodged to the transistors even without own footprints on the pcb.
+Hardware debouncing of the button is missing as well.
+It is not present on the original circuit so either the type of button used is not prone to bouncing or it is solved in software.
+In my breadboarding experiments it seems that a single 10uF electrolytic capacitor (the value and type were the first on hand) between the pin and ground get rid of all bouncing.
+If only the pin (PB2) was not SCK required for programming the chip.
+It seems the MCU wants its clock nice and straight and not filtered out..
+
+All in all it is a lovely endeavour and the breadboarded receiver (or rather a controller, since there is no signal to be received yet) is working well with all the interrupts and correct sleep modes.
+Short press makes the motor turn in one direction, long in the other, as desired.
+
+Also, I've tried to use C++ in an embedded system, works like a charm.
+![](201607202107.jpg)
+
 
 [1]: http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html
