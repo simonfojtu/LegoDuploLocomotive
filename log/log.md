@@ -102,5 +102,13 @@ This is the motor driver circuit.
 
 Since the locomotive goes only in one direction a single transistor is sufficitent. The positive battery terminal is not 100% correct, it is wired through a resistor R1, but I'm not sure about its use or value.
 
+## 2016-07-20
+
+The receiver PCB was sent to fab (oshpark.com), expected arrival well before deadline at 28. 8.
+The radio modules arrived.
+While testing the motor driver and radio receiver, it is obvious that the motor severely interferes with the simple communication at 433MHz.
+I've kind of expected that and thought it could be solved in software by using some encoding, but without an oscilloscope it would be hard to make it robust.
+Thus I've ordered some IR receivers, which should not be bothered by any EM interference.
+The main goal is to make the locomotive go forward and backward, remote control is a bonus to implement if there is time.
 
 [1]: http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html
