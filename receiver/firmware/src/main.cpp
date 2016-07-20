@@ -76,6 +76,29 @@ class MotorDriver {
 MotorDriver motorDriver(&PORTB, &DDRB, PB3, PB4);
 
 /*!
+ * Button
+ */
+class Button {
+    public:
+        Button(volatile uint8_t* in, volatile uint8_t* ddr, uint8_t pin) {
+            _in = in;
+            _pin = pin;
+
+            *ddr &= ~(1 << _pin);
+        }
+
+        bool isPressed() const {
+            return (*_in & (1 << _pin));
+        }
+    private:
+        uint8_t _pin;
+        volatile uint8_t* _in;
+};
+
+Button mainButton(&PINB, &DDRB, PB2);
+
+
+/*!
  * Timer0 overflow interrupt handling routine
  */
 ISR(TIMER0_OVF_vect)
@@ -106,6 +129,11 @@ void main_tick(void)
 //        stat.sec = stat.ltime / TIMER0_OVF_FREQ;
 
         /* Process buttons */
+    if (mainButton.isPressed()) {
+        motorDriver.fwd();
+    } else {
+        motorDriver.stop();
+    }
 //        Keyboard_tick(&stat);
 
         /* Slow tick */
@@ -129,14 +157,7 @@ int main(void)
 
 
         while (1) {
-            motorDriver.fwd();
-            _delay_ms(100);
-            motorDriver.stop();
-            _delay_ms(100);
-            motorDriver.rev();
-            _delay_ms(100);
-            motorDriver.stop();
-            _delay_ms(100);
+            main_tick();
         }
 
         return(0);
