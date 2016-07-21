@@ -100,7 +100,7 @@ This is the motor driver circuit.
 
 ![](20160712_motor_ctrl.png)
 
-Since the locomotive goes only in one direction a single transistor is sufficitent. The positive battery terminal is not 100% correct, it is wired through a resistor R1, but I'm not sure about its use or value.
+Since the locomotive goes only in one direction a single transistor is sufficitent. The positive battery terminal is not 100% correct, it is wired through a resistor R1, but I'm not sure about its use or value (note that the R1 label in the schematics should be R5).
 
 ## 2016-07-19
 
